@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir>
+
+# fail fast
+set -e
+
+echo "=====> Dumping nearest time zone data"
+bundle exec rake nearest_time_zone:dump
+
+exit 0
