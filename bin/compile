@@ -5,6 +5,6 @@
 set -e
 
 echo "=====> Dumping nearest time zone data"
-bundle exec rake nearest_time_zone:dump
+bin/rake nearest_time_zone:dump
 
 exit 0
