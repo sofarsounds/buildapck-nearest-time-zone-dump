@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# bin/detect <build-dir>
+
+if (test -f $1/Rakefile) then
+  echo "Rake installed"
+  exit 0
+else
+  echo "Rake not installed"
+  exit 1
+fi
