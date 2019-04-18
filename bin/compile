@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
-# bin/compile <build-dir> <cache-dir>
 
-# fail fast
-set -e
+set -e            # fail fast
+set -o pipefail   # don't ignore exit codes when piping output
 
-echo "=====> Dumping nearest time zone data"
-bin/rake nearest_time_zone:dump
+# Configure directories
+build_dir=$1
+cache_dir=$2
+env_dir=$3
 
-exit 0
+echo '-----------------------'
+echo '> Dumping time zone data'
+
+cd $build_dir
+rake nearest_time_zone:dump
