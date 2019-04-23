@@ -11,5 +11,4 @@ env_dir=$3
 echo '-----------------------'
 echo '> Dumping time zone data'
 
-cd $build_dir
-rake nearest_time_zone:dump
+cd $build_dir && bin/rake nearest_time_zone:dump
